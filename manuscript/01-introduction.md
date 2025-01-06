@@ -30,7 +30,7 @@ This book is your roadmap to mastering AI as part of your full-stack development
 
 4. **Scaling and Optimizing Applications:**
    - Learn best practices for deploying AI systems in production.
-   - Use tools like Docker, Kubernetes, and cloud platforms for scalability.
+   - Use tools like Docker, Kubernetes, OpenShift, and cloud platforms for scalability.
 
 ---
 
