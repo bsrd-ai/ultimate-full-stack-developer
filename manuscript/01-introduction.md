@@ -1,4 +1,3 @@
-
 # Chapter 1: Introduction
 
 The role of the full-stack developer has long been celebrated for its versatility—combining backend and frontend expertise 
