@@ -1,4 +1,3 @@
-
 # Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI
 
 Welcome to the repository for **"Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI"**. This book 
