@@ -116,7 +116,7 @@ Each chapter in the `manuscript` folder corresponds to code examples in the `cod
 ### 3. Clone the Repository
 To get started, clone this repository:
 ```bash
-git clone https://github.com/your-username/ultimate-full-stack-developer.git
+git clone https://github.com/bsrd-ai/ultimate-full-stack-developer.git
 cd ultimate-full-stack-developer
 ```
 
