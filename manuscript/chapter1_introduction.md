@@ -1,16 +1,10 @@
-
 # Chapter 1: Introduction
 
-The role of the full-stack developer has long been celebrated for its versatility—combining backend and frontend expertise 
-to build seamless, end-to-end applications. But as technology evolves, so do the expectations for developers.
+The role of the full-stack developer has long been celebrated for its versatility—combining backend and frontend expertise to build seamless, end-to-end applications. But as technology evolves, so do the expectations for developers.
 
-In today’s world, users demand more than just functional apps. They want **intelligent applications** that can anticipate 
-their needs, personalize experiences, and adapt dynamically. This shift is driven by the rapid rise of **AI**.
+In today’s world, users demand more than just functional apps. They want **intelligent applications** that can anticipate their needs, personalize experiences, and adapt dynamically. This shift is driven by the rapid rise of **AI**.
 
-This book is about redefining the role of the full-stack developer for the future. It’s not enough to master backend and 
-frontend anymore. To be truly competitive and future-proof your career, you need to incorporate **AI and data science** 
-into your skill set. This book will guide you on the journey to becoming the ultimate full-stack developer, capable of 
-building intelligent, end-to-end applications that combine backend, frontend, and AI.
+This book is about redefining the role of the full-stack developer for the future. It’s not enough to master backend and frontend anymore. To be truly competitive and future-proof your career, you need to incorporate **AI and data science** into your skill set. This book will guide you on the journey to becoming the ultimate full-stack developer, capable of building intelligent, end-to-end applications that combine backend, frontend, and AI.
 
 ---
 
@@ -35,8 +29,36 @@ This book is your roadmap to mastering AI as part of your full-stack development
 
 ---
 
+## Hands-On: A Simple Flask Example
+
+To get started with a basic backend framework, let's create a simple Flask application.
+
+### Steps:
+1. Open your Python environment or IDE.
+2. Create a new file named `flask_basic_example.py`.
+3. Add the following code:
+   ```python
+   from flask import Flask
+
+   app = Flask(__name__)
+
+   @app.route("/")
+   def home():
+       return "Hello, Flask!"
+
+   if __name__ == "__main__":
+       app.run(debug=True)
+   ```
+4. Run the application:
+   ```bash
+   python flask_basic_example.py
+   ```
+5. Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser to see the output.
+
+This example demonstrates how to create a minimal backend service, which we will expand upon in later chapters.
+
+---
+
 ## Why This Book Matters
 
-The full-stack developer role is evolving, and mastering AI is the next step in this journey. This book isn’t just about 
-adding AI as another tool—it’s about redefining what it means to be a full-stack developer in the age of intelligent 
-applications. Let’s embark on this exciting journey together.
+The full-stack developer role is evolving, and mastering AI is the next step in this journey. This book isn’t just about adding AI as another tool—it’s about redefining what it means to be a full-stack developer in the age of intelligent applications. Let’s embark on this exciting journey together.
