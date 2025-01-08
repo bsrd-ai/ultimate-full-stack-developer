@@ -113,32 +113,41 @@ The full code is available here:
 
 ### **3.3 Spring Boot (Java)**
 
-Below is a simple setup example for Spring Boot:
+The Spring Boot setup requires creating a full project. Below is a summary of the steps:
 
-1. Create a project using [Spring Initializr](https://start.spring.io/).
-2. Add the following code in the main application class:
-   ```java
-   import org.springframework.boot.SpringApplication;
-   import org.springframework.boot.autoconfigure.SpringBootApplication;
-   import org.springframework.web.bind.annotation.GetMapping;
-   import org.springframework.web.bind.annotation.RestController;
+1. **Create a Spring Boot Project:**
+   Use [Spring Initializr](https://start.spring.io/) to generate a basic Spring Boot project.
 
-   @SpringBootApplication
-   public class Application {
-       public static void main(String[] args) {
-           SpringApplication.run(Application.class, args);
-       }
+2. **Explore the Project:**
+   - The main application file is `Application.java`, which includes the following:
+     ```java
+     package com.example.demo;
 
-       @RestController
-       class HelloController {
-           @GetMapping("/")
-           public String home() {
-               return "Hello, Spring Boot Setup!";
-           }
-       }
-   }
-   ```
-3. Run the application using:
+     import org.springframework.boot.SpringApplication;
+     import org.springframework.boot.autoconfigure.SpringBootApplication;
+     import org.springframework.web.bind.annotation.GetMapping;
+     import org.springframework.web.bind.annotation.RestController;
+
+     @SpringBootApplication
+     public class Application {
+         public static void main(String[] args) {
+             SpringApplication.run(Application.class, args);
+         }
+
+         @RestController
+         class HelloController {
+             @GetMapping("/")
+             public String home() {
+                 return "Hello, Spring Boot Setup!";
+             }
+         }
+     }
+     ```
+   - Configuration details are in `application.properties`.
+   - Dependencies are managed through `pom.xml`.
+
+3. **Run the Application:**
+   Navigate to the project directory and use the following command:
    ```bash
    ./mvnw spring-boot:run
    ```
