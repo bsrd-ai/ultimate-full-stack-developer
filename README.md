@@ -1,3 +1,4 @@
+
 # Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI
 
 Welcome to the repository for **"Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI"**. This book 
@@ -89,16 +90,12 @@ ultimate-full-stack-developer/
 │   ├── Book.txt                   # Defines chapter order
 ├── code/
 │   ├── chapter1/
-│   │   └── flask_basic_example.py  # Flask example
+│   │   └── flask_basic_example.py  # Flask example for Chapter 1
 │   ├── chapter2/
-│   │   └── fastapi_ai_integration.py
-│   ├── chapter3/
-│   │   └── springboot_microservice/
-│   │       └── App.java
-│   ├── chapter4/
-│   │   └── nodejs_ai_api/
-│   │       ├── app.js
-│   │       └── package.json
+│   │   ├── flask_setup_example.py  # Flask setup example for Chapter 2
+│   │   ├── fastapi_setup_example.py # FastAPI setup example for Chapter 2
+│   │   ├── express_setup_example.js # Express.js setup example for Chapter 2
+│   │   └── springboot_setup_example/ # Spring Boot project setup for Chapter 2
 ├── README.md                     # Main repository README
 └── LICENSE                       # License file
 ```
