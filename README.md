@@ -1,4 +1,3 @@
-
 # Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI
 
 Welcome to the repository for **"Becoming the Ultimate Full-Stack Developer: Redefining the Role with AI"**. This book 
@@ -95,7 +94,10 @@ ultimate-full-stack-developer/
 │   │   ├── flask_setup_example.py  # Flask setup example for Chapter 2
 │   │   ├── fastapi_setup_example.py # FastAPI setup example for Chapter 2
 │   │   ├── express_setup_example.js # Express.js setup example for Chapter 2
-│   │   └── springboot_setup_example/ # Spring Boot project setup for Chapter 2
+│   │   └── springboot_setup_example/ # Full Spring Boot project setup for Chapter 2
+│       ├── src/main/java/com/example/demo/Application.java # Main application file
+│       ├── src/main/resources/application.properties       # Configuration file
+│       └── pom.xml                                         # Maven build file
 ├── README.md                     # Main repository README
 └── LICENSE                       # License file
 ```
@@ -114,7 +116,7 @@ Each chapter in the `manuscript` folder corresponds to code examples in the `cod
 ### 3. Clone the Repository
 To get started, clone this repository:
 ```bash
-git clone https://github.com/bsrd-ai/ultimate-full-stack-developer.git
+git clone https://github.com/your-username/ultimate-full-stack-developer.git
 cd ultimate-full-stack-developer
 ```
 
