@@ -31,21 +31,40 @@ This book is your roadmap to mastering AI as part of your full-stack development
 
 ## Hands-On: A Simple Flask Example
 
-To get started with a basic backend framework, you can explore a simple Flask application.
+To get started with a basic backend framework, let's explore a simple Flask application.
 
-The code for this example is available in the repository:
+### Code Example
 
-[flask_basic_example.py](../code/chapter1/flask_basic_example.py)
+Below is the code for a minimal Flask application:
 
-### Steps:
-1. Download the code from the link above.
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+This example demonstrates how to create a minimal backend service. It listens for requests at the root URL (`/`) and responds with "Hello, Flask!".
+
+### Running the Example
+
+1. Copy the code into a new file named `flask_basic_example.py`.
 2. Run the application:
    ```bash
    python flask_basic_example.py
    ```
 3. Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser to see the output.
 
-This example demonstrates how to create a minimal backend service, which we will expand upon in later chapters.
+### Download the Code
+
+The full code is also available for download here:
+[flask_basic_example.py](../code/chapter1/flask_basic_example.py)
 
 ---
 
