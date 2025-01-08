@@ -77,13 +77,19 @@ This repository hosts both the book’s content and practical code examples to h
 ```
 ultimate-full-stack-developer/
 ├── manuscript/
-│   ├── chapter1.md            # Chapter 1: Introduction
-│   ├── chapter2.md            # Chapter 2: Setting Up Your Development Environment
-│   ├── chapter3.md            # Chapter 3: Backend Development Basics
-│   ├── Book.txt               # Defines chapter order
+│   ├── chapter1_introduction.md      # Chapter 1: Introduction
+│   ├── chapter2_setup_environment.md # Chapter 2: Setting Up Your Development Environment
+│   ├── chapter3_backend_basics.md    # Chapter 3: Backend Development Basics
+│   ├── chapter4_frontend_basics.md   # Chapter 4: Frontend Development Basics
+│   ├── chapter5_ai_and_ml_basics.md  # Chapter 5: Introduction to AI and ML
+│   ├── chapter6_building_ai_backends.md # Chapter 6: Building AI-Powered Backends
+│   ├── chapter7_fullstack_ai_applications.md # Chapter 7: Full-Stack AI Applications
+│   ├── chapter8_deployment_and_scaling.md   # Chapter 8: Deployment and Scaling
+│   ├── chapter9_becoming_ultimate_fullstack.md # Chapter 9: Becoming the Ultimate Full-Stack Developer
+│   ├── Book.txt                   # Defines chapter order
 ├── code/
 │   ├── chapter1/
-│   │   └── flask_basic_example.py   # Flask example
+│   │   └── flask_basic_example.py  # Flask example
 │   ├── chapter2/
 │   │   └── fastapi_ai_integration.py
 │   ├── chapter3/
@@ -93,8 +99,8 @@ ultimate-full-stack-developer/
 │   │   └── nodejs_ai_api/
 │   │       ├── app.js
 │   │       └── package.json
-├── README.md                  # Main repository README
-└── LICENSE                    # License file
+├── README.md                     # Main repository README
+└── LICENSE                       # License file
 ```
 
 ---
