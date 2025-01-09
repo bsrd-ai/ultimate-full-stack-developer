@@ -25,7 +25,7 @@ Before diving into framework-specific setups, ensure you have the following tool
      python --version
      ```
 
-2. **Node.js and npm**
+2. **Node.js and npm** (Optional, depending on your project requirements)
    - Download from [nodejs.org](https://nodejs.org/).
    - Verify installation:
      ```bash
@@ -33,22 +33,15 @@ Before diving into framework-specific setups, ensure you have the following tool
      npm --version
      ```
 
-3. **Java (JDK 11 or higher)**
-   - Download from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://openjdk.org/).
-   - Verify installation:
-     ```bash
-     java -version
-     ```
-
-4. **Docker**
+3. **Docker** (Optional for containerized deployments)
    - Install from [docker.com](https://www.docker.com/).
    - Verify installation:
      ```bash
      docker --version
      ```
 
-5. **Integrated Development Environment (IDE):**
-   - VS Code, PyCharm, IntelliJ IDEA, or your preferred IDE.
+4. **Integrated Development Environment (IDE):**
+   - VS Code, PyCharm, or your preferred Python IDE.
 
 ---
 
@@ -111,83 +104,28 @@ The full code is available here:
 
 ---
 
-### **3.3 Spring Boot (Java)**
+### **3.3 Django (Python)**
 
-The Spring Boot setup requires creating a full project. Below is a summary of the steps:
+Below is a simple setup example for Django:
 
-1. **Create a Spring Boot Project:**
-   Use [Spring Initializr](https://start.spring.io/) to generate a basic Spring Boot project.
-
-2. **Explore the Project:**
-   - The main application file is `Application.java`, which includes the following:
-     ```java
-     package com.example.demo;
-
-     import org.springframework.boot.SpringApplication;
-     import org.springframework.boot.autoconfigure.SpringBootApplication;
-     import org.springframework.web.bind.annotation.GetMapping;
-     import org.springframework.web.bind.annotation.RestController;
-
-     @SpringBootApplication
-     public class Application {
-         public static void main(String[] args) {
-             SpringApplication.run(Application.class, args);
-         }
-
-         @RestController
-         class HelloController {
-             @GetMapping("/")
-             public String home() {
-                 return "Hello, Spring Boot Setup!";
-             }
-         }
-     }
-     ```
-   - Configuration details are in `application.properties`.
-   - Dependencies are managed through `pom.xml`.
-
-3. **Run the Application:**
-   Navigate to the project directory and use the following command:
+1. Install Django:
    ```bash
-   ./mvnw spring-boot:run
+   pip install django
    ```
 
-The full project setup can be accessed here:
-[springboot_setup_example](../code/chapter2/springboot_setup_example/)
-
----
-
-### **3.4 Node.js with Express.js**
-
-Below is a simple setup example for Express.js:
-
-```javascript
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-    res.send('Hello, Express Setup!');
-});
-
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
-});
-```
-
-### Steps:
-1. Save the code above as `express_setup_example.js`.
-2. Install Express.js:
+2. Create a new Django project:
    ```bash
-   npm install express
+   django-admin startproject myproject
    ```
-3. Run the application:
-   ```bash
-   node express_setup_example.js
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the output.
 
-The full code is available here:
-[express_setup_example.js](../code/chapter2/express_setup_example.js)
+3. Navigate to the project directory and run the server:
+   ```bash
+   python manage.py runserver
+   ```
+
+4. Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser to see the default Django welcome page.
+
+The full setup for Django is straightforward and well-documented in the [official Django documentation](https://docs.djangoproject.com/).
 
 ---
 
@@ -203,12 +141,7 @@ The full code is available here:
 2. **Port Conflicts:**
    - If a port is in use, specify a new port (e.g., `app.run(port=8080)` in Flask).
 
-3. **Node.js Errors:**
-   - Ensure `node_modules` is installed:
-     ```bash
-     npm install
-     ```
-
 ---
 
 By the end of this chapter, your development environment should be ready to handle the examples and projects in this book. Let’s move on to exploring the fundamentals of backend development!
+
