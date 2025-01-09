@@ -7,6 +7,7 @@ A well-configured development environment is essential for a seamless workflow, 
 ## 1. Importance of a Proper Development Environment
 
 A good development environment ensures:
+
 - **Consistency:** All team members work in a standardized setup.
 - **Efficiency:** Reduced time troubleshooting environment-related issues.
 - **Scalability:** Easy replication of the environment for production.
@@ -18,7 +19,9 @@ A good development environment ensures:
 Before diving into framework-specific setups, ensure you have the following tools installed:
 
 ### General Tools:
+
 1. **Python (Version 3.8 or higher)**
+
    - Download from [python.org](https://www.python.org/).
    - Verify installation:
      ```bash
@@ -26,6 +29,7 @@ Before diving into framework-specific setups, ensure you have the following tool
      ```
 
 2. **Node.js and npm** (Optional, depending on your project requirements)
+
    - Download from [nodejs.org](https://nodejs.org/).
    - Verify installation:
      ```bash
@@ -34,6 +38,7 @@ Before diving into framework-specific setups, ensure you have the following tool
      ```
 
 3. **Docker** (Optional for containerized deployments)
+
    - Install from [docker.com](https://www.docker.com/).
    - Verify installation:
      ```bash
@@ -41,6 +46,7 @@ Before diving into framework-specific setups, ensure you have the following tool
      ```
 
 4. **Integrated Development Environment (IDE):**
+
    - VS Code, PyCharm, or your preferred Python IDE.
 
 ---
@@ -65,15 +71,24 @@ if __name__ == "__main__":
 ```
 
 ### Steps:
+
 1. Save the code above as `flask_setup_example.py`.
-2. Run the application:
+2. Open the command prompt/terminal:
+   - **Windows:** Press `Win + R`, type `cmd`, and press Enter.
+   - **Mac:** Open `Spotlight Search` (`Cmd + Space`), type `Terminal`, and press Enter.
+   - **Linux:** Open the Terminal application from your system menu or press `Ctrl + Alt + T`.
+3. Run the application:
    ```bash
    python flask_setup_example.py
    ```
-3. Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser to see the output.
+4. Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser to see the output.
 
-The full code is available here:
-[flask_setup_example.py](../code/chapter2/flask_setup_example.py)
+#### Expected Output:
+After opening the link, your browser should display the following output:
+
+![Browser Output](images/flask_output.png)
+
+The full code is available here: [flask\_setup\_example.py](../code/chapter2/flask_setup_example.py)
 
 ---
 
@@ -92,6 +107,7 @@ async def read_root():
 ```
 
 ### Steps:
+
 1. Save the code above as `fastapi_setup_example.py`.
 2. Run the application:
    ```bash
@@ -99,8 +115,7 @@ async def read_root():
    ```
 3. Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser to see the output.
 
-The full code is available here:
-[fastapi_setup_example.py](../code/chapter2/fastapi_setup_example.py)
+The full code is available here: [fastapi\_setup\_example.py](../code/chapter2/fastapi_setup_example.py)
 
 ---
 
@@ -109,16 +124,19 @@ The full code is available here:
 Below is a simple setup example for Django:
 
 1. Install Django:
+
    ```bash
    pip install django
    ```
 
 2. Create a new Django project:
+
    ```bash
    django-admin startproject myproject
    ```
 
 3. Navigate to the project directory and run the server:
+
    ```bash
    python manage.py runserver
    ```
@@ -132,16 +150,17 @@ The full setup for Django is straightforward and well-documented in the [officia
 ## 4. Common Issues and Troubleshooting
 
 1. **Python Virtual Environment Issues:**
+
    - Activate the virtual environment before installing dependencies:
      ```bash
      source myenv/bin/activate   # Linux/Mac
-     myenv\Scripts\activate     # Windows
+     myenv\Scriptsctivate     # Windows
      ```
 
 2. **Port Conflicts:**
+
    - If a port is in use, specify a new port (e.g., `app.run(port=8080)` in Flask).
 
 ---
 
 By the end of this chapter, your development environment should be ready to handle the examples and projects in this book. Let’s move on to exploring the fundamentals of backend development!
-
