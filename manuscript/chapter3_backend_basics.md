@@ -1,3 +1,4 @@
+
 # Chapter 3: Backend Development Basics
 
 Backend development is the backbone of any modern application, enabling seamless communication between users, systems, and data. As a full-stack developer, mastering backend development is essential for building robust, scalable, and intelligent applications. This chapter will focus on the key concepts, frameworks, and a hands-on example to guide you through the basics of backend development.
@@ -119,48 +120,28 @@ async def recommend():
 
 ### **4.3 Django Example**
 
-**Setup Instructions:**
-Follow these steps to create a simple Django project and app:
+Django offers two methods for creating projects: automatic generation using `django-admin` and manual file creation.
 
-1. Install Django:
-   ```bash
-   pip install django
-   ```
+#### **Option 1: Automatic Generation**
 
-2. Create a new Django project:
-   ```bash
-   django-admin startproject backend_basics
-   cd backend_basics
-   ```
+Follow the instructions in this guide: [Django Admin Guide](../code/chapter3/django/django_admin_guide.txt)
 
-3. Add the following code to the `views.py` file:
-   ```python
-   from django.http import JsonResponse
+#### **Option 2: Manual Creation**
 
-   def home(request):
-       return JsonResponse({"message": "Welcome to the Backend Basics API with Django!"})
+Download the following pre-generated files to set up the project manually:
 
-   def recommendations(request):
-       return JsonResponse({"recommendations": ["Movie 1", "Movie 2", "Movie 3"]})
-   ```
+1. [manage.py](../code/chapter3/django/backend_basics_manage.py)
+2. [settings.py](../code/chapter3/django/backend_basics_settings.py)
+3. [urls.py (Project Level)](../code/chapter3/django/backend_basics_urls.py)
+4. [views.py](../code/chapter3/django/data/backend_basics_app_views.py)
+5. [urls.py (App Level)](../code/chapter3/django/backend_basics_app_urls.py)
 
-4. Update the `urls.py` file:
-   ```python
-   from django.urls import path
-   from .views import home, recommendations
-
-   urlpatterns = [
-       path('', home),
-       path('recommendations/', recommendations),
-   ]
-   ```
-
-5. Run the server:
+**Steps to Run Django:**
+1. Save these files in the appropriate project structure.
+2. Run the server:
    ```bash
    python manage.py runserver
    ```
-
-**Instructions File:** [django_setup_instructions.txt](../code/chapter3/django_setup_instructions.txt)
 
 ---
 
