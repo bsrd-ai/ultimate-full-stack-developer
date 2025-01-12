@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 ### **Steps to Run the Flask API:**
 
-The full code is available here: [https://github.com/your-repo-name/path-to-backend_basics_api.py](https://github.com/your-repo-name/path-to-backend_basics_api.py)
+The full code is available here: [backend_basics_api.py](../code/chapter3/backend_basics_api.py)
 
 1. Save the code above as `backend_basics_api.py`.
 2. Install Flask if not already installed:
