@@ -1,4 +1,3 @@
-
 # Chapter 3: Backend Development Basics
 
 Backend development is the backbone of any modern application, enabling seamless communication between users, systems, and data. As a full-stack developer, mastering backend development is essential for building robust, scalable, and intelligent applications. This chapter will focus on the key concepts, frameworks, and a hands-on example to guide you through the basics of backend development.
@@ -73,6 +72,9 @@ if __name__ == "__main__":
 ```
 
 ### **Steps to Run the Flask API:**
+
+The full code is available here: [https://github.com/your-repo-name/path-to-backend_basics_api.py](https://github.com/your-repo-name/path-to-backend_basics_api.py)
+
 1. Save the code above as `backend_basics_api.py`.
 2. Install Flask if not already installed:
    ```bash
