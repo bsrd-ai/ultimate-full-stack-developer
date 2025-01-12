@@ -47,7 +47,21 @@ Before diving into framework-specific setups, ensure you have the following tool
 
 4. **Integrated Development Environment (IDE):**
 
-   - VS Code, PyCharm, or your preferred Python IDE.
+   - An IDE simplifies coding by providing features like debugging, linting, version control, and plugin support. Here are some popular options:
+
+     - **VS Code:**
+       - Lightweight and extensible.
+       - Supports Python development with extensions like "Python" and "Flask Snippets."
+       - Download: [code.visualstudio.com](https://code.visualstudio.com/)
+
+     - **PyCharm:**
+       - Full-featured IDE tailored for Python.
+       - Includes powerful debugging tools and Django/Flask support.
+       - Download: [jetbrains.com/pycharm](https://www.jetbrains.com/pycharm/)
+
+     - **IntelliJ IDEA (with Python Plugin):**
+       - Great for multi-language projects, including Python and Java.
+       - Download: [jetbrains.com/idea](https://www.jetbrains.com/idea/)
 
 ---
 
@@ -86,7 +100,7 @@ if __name__ == "__main__":
 #### Expected Output:
 After opening the link, your browser should display the following output:
 
-![Browser Output](images/flask_output.png)
+![Browser Output](../images/flask_output.png)
 
 The full code is available here: [flask\_setup\_example.py](../code/chapter2/flask_setup_example.py)
 
@@ -154,7 +168,7 @@ The full setup for Django is straightforward and well-documented in the [officia
    - Activate the virtual environment before installing dependencies:
      ```bash
      source myenv/bin/activate   # Linux/Mac
-     myenv\Scriptsctivate     # Windows
+     myenv\Scripts ctivate     # Windows
      ```
 
 2. **Port Conflicts:**
