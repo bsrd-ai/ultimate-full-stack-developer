@@ -52,7 +52,6 @@ Backend frameworks streamline the development process by providing tools and lib
 ## 4. Hands-On Examples: Building RESTful APIs
 
 ### **4.1 Flask Example**
-
 ```python
 from flask import Flask, jsonify
 
@@ -87,7 +86,6 @@ if __name__ == "__main__":
 ---
 
 ### **4.2 FastAPI Example**
-
 ```python
 from fastapi import FastAPI
 
@@ -102,7 +100,7 @@ async def recommend():
     return {"recommendations": ["Movie 1", "Movie 2", "Movie 3"]}
 ```
 
-**Steps to Run the FastAPI:**
+**Steps to Run the FastAPI API:**
 1. Save the code above as `fastapi_basics_api.py`.
 2. Install FastAPI and Uvicorn:
    ```bash
@@ -120,49 +118,128 @@ async def recommend():
 
 ### **4.3 Django Example**
 
-Django offers two methods for creating projects: automatic generation using `django-admin` and manual file creation.
-
 #### **Option 1: Automatic Generation**
-
-Follow the instructions in this guide: [Django Admin Guide](../code/chapter3/django/django_admin_guide.md)
+Follow the instructions in this guide: [Django Admin Guide](../code/chapter3/django/django_admin_guide.txt)
 
 #### **Option 2: Manual Creation**
+Below are the file contents for manually setting up a Django project. Links to each file in the repository are also provided.
 
-Download the following pre-generated files to set up the project manually:
+1. **manage.py**
+   [Download manage.py](../code/chapter3/django/backend_basics_manage.py)
+   ```python
+   #!/usr/bin/env python
+   import os
+   import sys
 
-1. [manage.py](../code/chapter3/django/backend_basics_manage.py)
-2. [settings.py](../code/chapter3/django/backend_basics_settings.py)
-3. [urls.py (Project Level)](../code/chapter3/django/backend_basics_urls.py)
-4. [views.py](../code/chapter3/django/data/backend_basics_app_views.py)
-5. [urls.py (App Level)](../code/chapter3/django/backend_basics_app_urls.py)
+   if __name__ == "__main__":
+       os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend_basics.settings")
+       try:
+           from django.core.management import execute_from_command_line
+       except ImportError as exc:
+           raise ImportError(
+               "Couldn't import Django. Are you sure it's installed and "
+               "available on your PYTHONPATH environment variable? Did you "
+               "forget to activate a virtual environment?"
+           ) from exc
+       execute_from_command_line(sys.argv)
+   ```
 
-**Steps to Run Django:**
-1. Save these files in the appropriate project structure.
-2. Run the server:
-   ```bash
-   python manage.py runserver
+2. **settings.py**
+   [Download settings.py](../code/chapter3/django/backend_basics_settings.py)
+   ```python
+   from pathlib import Path
+
+   BASE_DIR = Path(__file__).resolve().parent.parent
+   SECRET_KEY = 'django-insecure-replace-me'
+   DEBUG = True
+   ALLOWED_HOSTS = []
+
+   INSTALLED_APPS = [
+       'django.contrib.admin',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
+       'backend_basics_app',
+   ]
+
+   MIDDLEWARE = [
+       'django.middleware.security.SecurityMiddleware',
+       'django.contrib.sessions.middleware.SessionMiddleware',
+       'django.middleware.common.CommonMiddleware',
+       'django.middleware.csrf.CsrfViewMiddleware',
+       'django.contrib.auth.middleware.AuthenticationMiddleware',
+       'django.contrib.messages.middleware.MessageMiddleware',
+       'django.middleware.clickjacking.XContentOptionsMiddleware',
+   ]
+
+   ROOT_URLCONF = 'backend_basics.urls'
+
+   TEMPLATES = [
+       {
+           'BACKEND': 'django.template.backends.django.DjangoTemplates',
+           'DIRS': [],
+           'APP_DIRS': True,
+           'OPTIONS': {
+               'context_processors': [
+                   'django.template.context_processors.debug',
+                   'django.template.context_processors.request',
+                   'django.contrib.auth.context_processors.auth',
+                   'django.contrib.messages.context_processors.messages',
+               ],
+           },
+       },
+   ]
+
+   WSGI_APPLICATION = 'backend_basics.wsgi.application'
+   DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}}
+   AUTH_PASSWORD_VALIDATORS = []
+   LANGUAGE_CODE = 'en-us'
+   TIME_ZONE = 'UTC'
+   USE_I18N = True
+   USE_TZ = True
+   STATIC_URL = 'static/'
+   DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+   ```
+
+3. **urls.py (Project Level)**
+   [Download urls.py](../code/chapter3/django/backend_basics_urls.py)
+   ```python
+   from django.contrib import admin
+   from django.urls import path, include
+
+   urlpatterns = [
+       path('admin/', admin.site.urls),
+       path('', include('backend_basics_app.urls')),
+   ]
+   ```
+
+4. **views.py**
+   [Download views.py](../code/chapter3/django/backend_basics_app_views.py)
+   ```python
+   from django.http import JsonResponse
+
+   def home(request):
+       return JsonResponse({"message": "Welcome to the Backend Basics API with Django!"})
+
+   def recommendations(request):
+       return JsonResponse({"recommendations": ["Movie 1", "Movie 2", "Movie 3"]})
+   ```
+
+5. **urls.py (App Level)**
+   [Download urls.py](../code/chapter3/django/backend_basics_app_urls.py)
+   ```python
+   from django.urls import path
+   from . import views
+
+   urlpatterns = [
+       path('', views.home),
+       path('recommendations/', views.recommendations),
+   ]
    ```
 
 ---
 
-## 5. Common Challenges in Backend Development
-
-### **5.1 Debugging API Issues**
-- **Problem:** Unexpected errors when calling endpoints.
-- **Solution:** Use tools like Postman or curl to test APIs and debug logs.
-
-### **5.2 Database Performance**
-- **Problem:** Slow queries or high database load.
-- **Solution:** Optimize queries, add indexes, and use caching mechanisms.
-
-### **5.3 Scaling Services**
-- **Problem:** Increased traffic leading to bottlenecks.
-- **Solution:** Implement load balancers, auto-scaling, and containerization with Docker.
-
----
-
 ## Conclusion
-
-Backend development forms the backbone of full-stack applications, enabling robust data handling and seamless communication. By mastering RESTful APIs, microservices, and frameworks like Flask, FastAPI, and Django, you can build scalable and efficient systems that integrate seamlessly with AI capabilities.
-
-In the next chapter, we’ll explore **Frontend Development Basics** and learn how to create user-friendly interfaces that connect to intelligent backends.
+By mastering Flask, FastAPI, and Django, you can develop robust backend systems for AI-driven applications.
