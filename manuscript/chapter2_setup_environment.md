@@ -100,7 +100,7 @@ if __name__ == "__main__":
 #### Expected Output:
 After opening the link, your browser should display the following output:
 
-![Browser Output](../images/flask_output.png)
+![Browser Output](images/flask_output.png)
 
 The full code is available here: [flask\_setup\_example.py](../code/chapter2/flask_setup_example.py)
 
