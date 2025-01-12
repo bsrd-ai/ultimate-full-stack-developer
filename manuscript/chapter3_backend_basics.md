@@ -48,11 +48,9 @@ Backend frameworks streamline the development process by providing tools and lib
 
 ---
 
-## 4. Hands-On Example: Building a RESTful API with Flask
+## 4. Hands-On Examples: Building RESTful APIs
 
-To align with the preferences shown in our recent poll (64% favoring Python frameworks), we’ll use Flask for this hands-on example.
-
-### **Example: Simple RESTful API**
+### **4.1 Flask Example**
 
 ```python
 from flask import Flask, jsonify
@@ -71,10 +69,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-### **Steps to Run the Flask API:**
-
-The full code is available here: [backend_basics_api.py](../code/chapter3/backend_basics_api.py)
-
+**Steps to Run the Flask API:**
 1. Save the code above as `backend_basics_api.py`.
 2. Install Flask if not already installed:
    ```bash
@@ -86,19 +81,86 @@ The full code is available here: [backend_basics_api.py](../code/chapter3/backen
    ```
 4. Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
-#### Expected Output:
-- **Home Endpoint (`GET /`)**:
-  ```json
-  {
-      "message": "Welcome to the Backend Basics API!"
-  }
-  ```
-- **Recommendations Endpoint (`POST /recommendations`)**:
-  ```json
-  {
-      "recommendations": ["Movie 1", "Movie 2", "Movie 3"]
-  }
-  ```
+**Full Code:** [backend_basics_api.py](../code/chapter3/backend_basics_api.py)
+
+---
+
+### **4.2 FastAPI Example**
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def home():
+    return {"message": "Welcome to the Backend Basics API with FastAPI!"}
+
+@app.post("/recommendations")
+async def recommend():
+    return {"recommendations": ["Movie 1", "Movie 2", "Movie 3"]}
+```
+
+**Steps to Run the FastAPI:**
+1. Save the code above as `fastapi_basics_api.py`.
+2. Install FastAPI and Uvicorn:
+   ```bash
+   pip install fastapi uvicorn
+   ```
+3. Run the application:
+   ```bash
+   uvicorn fastapi_basics_api:app --reload
+   ```
+4. Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
+
+**Full Code:** [fastapi_basics_api.py](../code/chapter3/fastapi_basics_api.py)
+
+---
+
+### **4.3 Django Example**
+
+**Setup Instructions:**
+Follow these steps to create a simple Django project and app:
+
+1. Install Django:
+   ```bash
+   pip install django
+   ```
+
+2. Create a new Django project:
+   ```bash
+   django-admin startproject backend_basics
+   cd backend_basics
+   ```
+
+3. Add the following code to the `views.py` file:
+   ```python
+   from django.http import JsonResponse
+
+   def home(request):
+       return JsonResponse({"message": "Welcome to the Backend Basics API with Django!"})
+
+   def recommendations(request):
+       return JsonResponse({"recommendations": ["Movie 1", "Movie 2", "Movie 3"]})
+   ```
+
+4. Update the `urls.py` file:
+   ```python
+   from django.urls import path
+   from .views import home, recommendations
+
+   urlpatterns = [
+       path('', home),
+       path('recommendations/', recommendations),
+   ]
+   ```
+
+5. Run the server:
+   ```bash
+   python manage.py runserver
+   ```
+
+**Instructions File:** [django_setup_instructions.txt](../code/chapter3/django_setup_instructions.txt)
 
 ---
 
@@ -120,6 +182,6 @@ The full code is available here: [backend_basics_api.py](../code/chapter3/backen
 
 ## Conclusion
 
-Backend development forms the backbone of full-stack applications, enabling robust data handling and seamless communication. By mastering RESTful APIs, microservices, and frameworks like Flask, you can build scalable and efficient systems that integrate seamlessly with AI capabilities.
+Backend development forms the backbone of full-stack applications, enabling robust data handling and seamless communication. By mastering RESTful APIs, microservices, and frameworks like Flask, FastAPI, and Django, you can build scalable and efficient systems that integrate seamlessly with AI capabilities.
 
 In the next chapter, we’ll explore **Frontend Development Basics** and learn how to create user-friendly interfaces that connect to intelligent backends.
