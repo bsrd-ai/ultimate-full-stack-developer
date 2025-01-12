@@ -124,7 +124,7 @@ Django offers two methods for creating projects: automatic generation using `dja
 
 #### **Option 1: Automatic Generation**
 
-Follow the instructions in this guide: [Django Admin Guide](../code/chapter3/django/django_admin_guide.txt)
+Follow the instructions in this guide: [Django Admin Guide](../code/chapter3/django/django_admin_guide.md)
 
 #### **Option 2: Manual Creation**
 
