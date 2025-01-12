@@ -95,9 +95,11 @@ ultimate-full-stack-developer/
 │   │   ├── fastapi_setup_example.py # FastAPI setup example for Chapter 2
 │   │   ├── express_setup_example.js # Express.js setup example for Chapter 2
 │   │   └── springboot_setup_example/ # Full Spring Boot project setup for Chapter 2
-│       ├── src/main/java/com/example/demo/Application.java # Main application file
-│       ├── src/main/resources/application.properties       # Configuration file
-│       └── pom.xml                                         # Maven build file
+│   |   ├── src/main/java/com/example/demo/Application.java # Main application file
+│   |   ├── src/main/resources/application.properties       # Configuration file
+│   |   └── pom.xml                                         # Maven build file
+│   ├── chapter3/
+│   │   └── backend_basics_api.py  # Flask example for Chapter 3
 ├── README.md                     # Main repository README
 └── LICENSE                       # License file
 ```
