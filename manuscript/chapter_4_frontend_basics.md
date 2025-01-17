@@ -61,7 +61,7 @@ To demonstrate the integration between frontend frameworks and backend systems, 
        app.run(debug=True)
    ```
 
-   [Rain Prediction Flask Code](code/rain_prediction_flask.py)
+   [Rain Prediction Flask Code](../code/chapter4/rain_prediction_flask.py)
 
 2. **FastAPI for Temperature Prediction (Regression)**:
 
@@ -77,7 +77,7 @@ To demonstrate the integration between frontend frameworks and backend systems, 
        return {"prediction": temperature}
    ```
 
-   [Temperature Prediction FastAPI Code](code/temperature_prediction_fastapi.py)
+   [Temperature Prediction FastAPI Code](../code/chapter4/temperature_prediction_fastapi.py)
 
 3. **Django API for Weather Condition Prediction (Multi-Class Classification)**:
 
@@ -101,7 +101,7 @@ To demonstrate the integration between frontend frameworks and backend systems, 
    ]
    ```
 
-   [Weather Condition Django Code](code/weather_condition_django.py)
+   [Weather Condition Django Code](../code/chapter4/weather_condition_django.py)
 
 ---
 
@@ -151,7 +151,7 @@ function App() {
 export default App;
 ```
 
-[React Code Example](code/App.js)
+[React Code Example](../code/chapter4/App.js)
 
 ---
 
