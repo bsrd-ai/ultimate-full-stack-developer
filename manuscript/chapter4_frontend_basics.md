@@ -60,7 +60,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-[Rain Prediction Flask Code](code/rain_prediction_flask.py)
+[Rain Prediction Flask Code](../code/chapter4/rain_prediction_flask.py)
 
 ### **2. FastAPI for Temperature Prediction (Regression)**
 
@@ -76,7 +76,7 @@ async def temperature_prediction(data: dict):
     return {"prediction": temperature}
 ```
 
-[Temperature Prediction FastAPI Code](code/temperature_prediction_fastapi.py)
+[Temperature Prediction FastAPI Code](../code/chapter4/temperature_prediction_fastapi.py)
 
 ### **3. Django API for Weather Clustering (Unsupervised Learning)**
 
@@ -101,7 +101,7 @@ urlpatterns = [
 ]
 ```
 
-[Weather Clustering Django Code](code/weather_clustering_django.py)
+[Weather Clustering Django Code](../code/chapter4/weather_clustering_django.py)
 
 ### **4. Flask API for Weather Alerts (Reinforcement Learning)**
 
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-[Weather Alerts Flask Code](code/weather_alert_flask.py)
+[Weather Alerts Flask Code](../code/chapter4/weather_alert_flask.py)
 
 ---
 
@@ -187,7 +187,7 @@ function App() {
 export default App;
 ```
 
-[React Code Example](code/App.js)
+[React Code Example](../code/chapter4/App.js)
 
 ---
 
