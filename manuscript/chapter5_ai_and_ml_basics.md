@@ -22,16 +22,15 @@ Machine Learning is a subset of AI that focuses on creating systems capable of l
 ### **Types of Machine Learning:**
 1. **Supervised Learning**:
    - **Definition**: Models learn from labeled datasets.
-   - **Example**: Rain prediction based on humidity (binary classification).
+   - **Examples**: 
+     - Binary Classification: Rain prediction based on humidity.
+     - Regression: Temperature prediction based on humidity and pressure.
 2. **Unsupervised Learning**:
    - **Definition**: Models discover patterns in unlabeled data.
    - **Example**: Clustering weather conditions (e.g., cold-humid, hot-dry).
 3. **Reinforcement Learning**:
    - **Definition**: Models learn by interacting with the environment and receiving rewards or penalties.
    - **Example**: Deciding optimal times for sending weather alerts.
-4. **Regression**:
-   - **Definition**: Models predict continuous values based on input features.
-   - **Example**: Temperature prediction based on humidity and pressure.
 
 ---
 
@@ -72,7 +71,7 @@ Several frameworks simplify the development and deployment of ML models. Below a
 
 To connect these concepts to real-world applications, this chapter will use the APIs built in Chapter 4 as examples:
 
-1. **Rain Prediction (Supervised Learning)**:
+1. **Rain Prediction (Supervised Learning - Binary Classification)**:
    - Train a binary classification model using historical weather data.
 
    ```python
@@ -97,48 +96,7 @@ To connect these concepts to real-world applications, this chapter will use the 
    print(f"Accuracy: {accuracy_score(y_test, predictions)}")
    ```
 
-2. **Weather Clustering (Unsupervised Learning)**:
-   - Use clustering algorithms to group similar weather patterns.
-
-   ```python
-   from sklearn.cluster import KMeans
-   import numpy as np
-
-   # Example dataset
-   X = np.array([[15, 70], [20, 60], [25, 50], [35, 30], [10, 80]])
-
-   # Clustering
-   kmeans = KMeans(n_clusters=2, random_state=42)
-   kmeans.fit(X)
-
-   # Results
-   clusters = kmeans.labels_
-   print(f"Cluster Assignments: {clusters}")
-   ```
-
-3. **Weather Alerts (Reinforcement Learning)**:
-   - Implement a reinforcement learning model for decision-making.
-
-   ```python
-   import random
-
-   # Define the environment
-   actions = ["send_alert", "wait"]
-   states = {"hot_dry": (35, 20), "cold_humid": (5, 80), "moderate": (20, 60)}
-   rewards = {"send_alert": 10, "wait": 1}
-
-   # Simple policy
-   def choose_action(state):
-       return random.choice(actions)
-
-   # Simulate environment
-   state = states["hot_dry"]
-   action = choose_action(state)
-   reward = rewards[action]
-   print(f"State: {state}, Action: {action}, Reward: {reward}")
-   ```
-
-4. **Temperature Prediction (Regression)**:
+2. **Temperature Prediction (Supervised Learning - Regression)**:
    - Predict temperature based on humidity and pressure.
 
    ```python
@@ -162,6 +120,47 @@ To connect these concepts to real-world applications, this chapter will use the 
    # Prediction
    predictions = model.predict(X_test)
    print(f"Predicted Temperatures: {predictions}")
+   ```
+
+3. **Weather Clustering (Unsupervised Learning)**:
+   - Use clustering algorithms to group similar weather patterns.
+
+   ```python
+   from sklearn.cluster import KMeans
+   import numpy as np
+
+   # Example dataset
+   X = np.array([[15, 70], [20, 60], [25, 50], [35, 30], [10, 80]])
+
+   # Clustering
+   kmeans = KMeans(n_clusters=2, random_state=42)
+   kmeans.fit(X)
+
+   # Results
+   clusters = kmeans.labels_
+   print(f"Cluster Assignments: {clusters}")
+   ```
+
+4. **Weather Alerts (Reinforcement Learning)**:
+   - Implement a reinforcement learning model for decision-making.
+
+   ```python
+   import random
+
+   # Define the environment
+   actions = ["send_alert", "wait"]
+   states = {"hot_dry": (35, 20), "cold_humid": (5, 80), "moderate": (20, 60)}
+   rewards = {"send_alert": 10, "wait": 1}
+
+   # Simple policy
+   def choose_action(state):
+       return random.choice(actions)
+
+   # Simulate environment
+   state = states["hot_dry"]
+   action = choose_action(state)
+   reward = rewards[action]
+   print(f"State: {state}, Action: {action}, Reward: {reward}")
    ```
 
 These examples will provide a foundation for implementing AI-powered backend systems in the next chapter.
